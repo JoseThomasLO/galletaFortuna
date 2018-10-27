@@ -7,6 +7,10 @@ $botman->hears('Hi', function ($bot) {
     $bot->reply('Hello!');
 });
 
+$botman->hears('About', function ($bot) {
+    $bot->reply('Este bot da frases de la fortuna y fue desarrollado por Jose Thomas Lopez Osorio');
+});
+
 $botman->hears('romper galleta', function ($bot) {
     $cookie = Cookie::all()->random(1)->first();
     $bot->reply($cookie->message);
